@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6 col-md-6"> <h4 class="card-title">Contact Us Customer</h4></div>
+            <div class="col-lg-6 col-md-6" style="text-align: right;"> <button type="button" class="btn btn-sm btn-outline-primary" (click)="downloadTemplateContact()">Export</button></div>
+        </div>
+       
+       
+        
+        <div class="table-responsive">
+            <table class="table table-hover align-middle text-nowrap table-bordered" id="table-data-contact">
+                <thead>
+                    <tr>
+                        <th class="text-dark font-medium fs-4">#</th>
+                        <th class="text-dark font-medium fs-4">Full Name</th>
+                        <th class="text-dark font-medium fs-4">Nick Name</th>
+                        <th class="text-dark font-medium fs-4">Phone Number</th>
+                        <th class="text-dark font-medium fs-4">Email</th>
+                        <th class="text-dark font-medium fs-4">Contact Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let tr of contacts; index as i'>
+                        <td>
+                            {{ i + 1 }}
+                        </td>
+                        <td>
+                            {{tr.name}}
+                        </td>
+                        <td>
+                            {{tr.nickName}}
+                        </td>
+                        <td>
+                            {{tr.phone}}
+                        </td>
+                        <td>
+                            {{tr.email}}
+                        </td>
+                        <td>
+                            {{tr.details}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6 col-md-6"> <h4 class="card-title">Risk Assessment Customer</h4></div>
+            <div class="col-lg-6 col-md-6" style="text-align: right;"> <button type="button" class="btn btn-sm btn-outline-primary" (click)="downloadTemplateRisk()">Export</button></div>
+        </div>
+       
+        <div class="table-responsive">
+            <table class="table table-hover align-middle text-nowrap table-bordered" id="table-data">
+                <thead>
+                    <tr>
+                        <th class="text-dark font-medium fs-4">#</th>
+                        <th class="text-dark font-medium fs-4">Full Name</th>
+                        <th class="text-dark font-medium fs-4">Email</th>
+                        <th class="text-dark font-medium fs-4">Phone Number</th>
+                        <th class="text-dark font-medium fs-4">Score</th>
+                        <th class="text-dark font-medium fs-4">RiskAssessment</th>
+                        <th class="text-dark font-medium fs-4">Permission</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let tr of riskAssessment; index as i'>
+                        <td>
+                            {{ i + 1 }}
+                        </td>
+                        <td>
+                            {{tr.name}}
+                        </td>
+                        <td>
+                            {{tr.email}}
+                        </td>
+                        <td>
+                            {{tr.phone}}
+                        </td>
+                        <td>
+                            {{tr.score}}
+                        </td>
+                        <td>
+                            {{tr.risk}}
+                        </td>
+                        <td>
+                            {{tr.terms}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

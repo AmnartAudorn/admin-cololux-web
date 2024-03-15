@@ -1,0 +1,99 @@
+// Responsive
+/*
+Template Name: Admin Template
+Author: Wrappixel
+
+File: scss
+*/
+
+/*============================================================== 
+ For Desktop & above all (1650px) 
+ ============================================================== */
+
+/*============================================================== 
+ For Laptop & above all (1370px) 
+ ============================================================== */
+
+/*-- ============================================================== 
+ Small Desktop & above all (1024px) 
+ ============================================================== */
+@media (min-width: 1024px) {
+  .page-wrapper {
+    margin-left: $sidebar-width-full;
+  }
+}
+
+@media (min-width: 1024px){
+  #main-wrapper {
+    &[data-layout="vertical"]{
+      /*This is for the logo bg*/
+      .topbar .top-navbar .navbar-header {
+        &[data-logobg="skin6"] {
+          background: $skin6;
+          .navbar-brand {
+            .dark-logo {
+              display: inline;
+              width: 100%;
+              margin: 0% 0%;
+            }
+            .light-logo {
+              display: none;
+            }
+          }
+          .nav-toggler,
+          .topbartoggler {
+            color: $body-color;
+          }
+        }
+      }
+      .topbar .navbar-collapse,
+      .topbar {
+        &[data-navbarbg="skin1"] {
+          background: $themecolor-dark;
+        }
+      }
+      /*This is for the sidebar bg*/
+      .left-sidebar {
+        &[data-sidebarbg="skin6"] {
+          background: $skin6;
+          .sidebar-nav {
+            ul {
+              background: $skin6;
+              .sidebar-item {
+                &.active {
+                  > .sidebar-link {
+                    color: $info;
+                    i {
+                      color: $info;
+                    }
+                  }
+                }
+                .sidebar-link {
+                  color: $sidebar-text-dark;
+                  i {
+                    color: $sidebar-icons-dark;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+/*-- ============================================================== 
+ Ipad & above all(768px) 
+ ============================================================== */
+
+@include media-breakpoint-up(md) {
+  
+}
+
+/*-- ============================================================== 
+ Phone and below ipad(767px) 
+ ============================================================== */
+@include media-breakpoint-down(md) {
+}

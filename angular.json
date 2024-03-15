@@ -17,6 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "ng-apexcharts",
+              "apexcharts"
+            ],
             "outputPath": "dist/admin-colo-lux-web",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -30,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/scss/style.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -100,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "faca5351-bb76-4240-8b15-5cca4c9ce2f8"
   }
 }
